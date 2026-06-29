@@ -38,8 +38,26 @@ FROM pizza_sales<br>
 GROUP BY pizza_size<br>
 ORDER BY PCT_size DESC;<br>
   <img width="132" height="104" alt="image" src="https://github.com/user-attachments/assets/3845e166-f621-4b77-81e1-34da4f90a9a8" /> <br>
-
-
+  5. Top 5 Best Sellers by Revenue: <br>
+     SELECT TOP 5 pizza_name,SUM(total_price) AS Total_Revenue FROM pizza_sales <br>
+GROUP BY pizza_name <br>
+ORDER BY Total_Revenue DESC; <br>
+  <img width="198" height="91" alt="image" src="https://github.com/user-attachments/assets/26b27f11-bc22-4c0d-9486-c3995cc18c29" /> <br>
+  6. Bottom 5 Best Sellers by Revenue : <br>
+  SELECT TOP 5 pizza_name,SUM(total_price) AS Total_Revenue FROM pizza_sales <br>
+GROUP BY pizza_name <br>
+ORDER BY Total_Revenue ASC; <br>
+  <img width="224" height="98" alt="image" src="https://github.com/user-attachments/assets/b761e90b-bd42-4ce2-99de-ab55aa02b146" /> <br>
+  7. Top/Bottom 5 Best Sellers by Quantity: <br>
+     SELECT TOP 5 pizza_name,SUM(quantity) AS Total_Quantity FROM pizza_sales
+GROUP BY pizza_name
+ORDER BY Total_Quantity DESC/ASC;
+  <img width="218" height="104" alt="image" src="https://github.com/user-attachments/assets/f6cac1bb-90eb-4210-bf7a-dbf9943ee40f" /> <br>
+  8. Top/Bottom 5 Best Sellers by Total Orders: <br>
+     SELECT TOP 5 pizza_name,COUNT(DISTINCT order_id) AS Total_Orders FROM pizza_sales <br>
+GROUP BY pizza_name <br>
+ORDER BY Total_Orders DESC; <br>
+    <img width="201" height="103" alt="image" src="https://github.com/user-attachments/assets/a2c3d74f-103c-40cc-af25-25a85a65bc96" /> <br>
 
 
 
